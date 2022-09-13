@@ -1,0 +1,158 @@
+:root {
+  --left-common-padding: 20px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#TabsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 500px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+#contentWindow {
+  display: flex;
+  flex-direction: row;
+  margin-left: var(--left-common-padding);
+  border: 2px solid #000000;
+  width: 100%;
+  height: 100%;
+}
+
+#navBar {
+  display: flex;
+  justify-content: flex-start;
+  height: 30px;
+  padding-left: var(--left-common-padding);
+  margin: 0 0;
+}
+
+#navBar li{
+  border: 2px solid #000000;
+  width: 150px;
+  margin-right: 5px;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: 0;
+}
+
+#navBar li:hover {
+  background: #e8e8e8;
+}
+
+#navBar li.active {
+  background: #b9b9b9;
+}
+
+#navBar li.ready {
+  background: #93c168;
+}
+
+#ConfigTab {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
+  padding-right: 50px;
+  padding-top: 50px;
+}
+
+#ConfigTab textarea {
+  width: 90%;
+  height: 100%;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+  border: 2px solid #000000;
+  height: 80%;
+}
+
+#applyButton {
+  margin-top: 25px;
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#applyButton:hover, .formButton:hover {
+  background-color: #b9b9b9;
+}
+
+#applyButton:active, .formButton:hover {
+  background-color: #9d9d9d;
+}
+
+form {
+  margin-left: 20px;
+  align-self: center;
+  justify-content: space-around;
+  height: 80%;
+  width: 90%;
+}
+
+fieldset {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.viewTable {
+  display: table;
+  width: 100%;
+  border-spacing: 20px;
+}
+
+.viewRow {
+  display: table-row;
+  margin-top: 20px;
+}
+
+.viewRow>div {
+  display: table-cell;
+}
+
+.viewLabel {
+  text-align: left;
+}
+
+.formButton {
+    margin-left: 20px;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.radioButton {
+  margin-right: 15px;
+}

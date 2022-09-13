@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "definitions": {
+        "FormElementEnum": {
+            "enum": [
+                "checkbox",
+                "date",
+                "number",
+                "radio",
+                "text",
+                "textarea"
+            ],
+            "type": "string"
+        },
+        "FormElementSchema": {
+            "properties": {
+                "label": {
+                    "type": "string"
+                },
+                "radioLabels": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "maxItems": 4,
+                    "type": "array"
+                },
+                "type": {
+                    "$ref": "#/definitions/FormElementEnum"
+                }
+            },
+            "required": [
+                "label",
+                "type"
+            ],
+            "type": "object"
+        }
+    },
+    "properties": {
+        "buttons": {
+            "items": {
+                "type": "string"
+            },
+            "maxItems": 4,
+            "type": "array"
+        },
+        "formTitle": {
+            "type": "string"
+        },
+        "items": {
+            "items": {
+                "$ref": "#/definitions/FormElementSchema"
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+
